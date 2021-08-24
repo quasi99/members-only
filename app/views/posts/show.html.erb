@@ -1,19 +1,25 @@
-<p id="notice"><%= notice %></p>
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <%= render "topics" %>
+      
+      <div class="column is-half">
+        <div class="media box">
+          <div class="media-content">
+            <h1 class="title is-2">
+              <%= @post.title %>
+            </h1>
+            <div class="field">
+              <div class="control">
+              <%= @post.body %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <%= render "feed" %>
+      </div>
 
-<p>
-  <strong>Body:</strong>
-  <%= @post.body %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
-
-<p>
-  <strong>Member:</strong>
-  <%= @post.member_id %>
-</p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+      <%= render "authors" %>
+    </div>
+  </div>
+</section>
